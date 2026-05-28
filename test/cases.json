@@ -1,0 +1,128 @@
+[
+    {
+        "title": "Two-word match ✅",
+        "description": "Finds both starting positions where the two words appear as a direct concatenation. 🔎",
+        "input": {
+            "s": "barfoothefoobarman",
+            "words": ["foo", "bar"]
+        },
+        "output": [0, 9]
+    },
+    {
+        "title": "No valid substring 🚫",
+        "description": "Returns an empty list when no exact concatenation of all words is possible. 📭",
+        "input": {
+            "s": "wordgoodgoodgoodbestword",
+            "words": ["word", "good", "best", "word"]
+    },
+        "output": []
+    },
+    {
+        "title": "Multiple overlapping matches 🔁",
+        "description": "Detects several valid starting indices in a string with repeated word patterns. 🌐",
+        "input": {
+            "s": "barfoofoobarthefoobarman",
+            "words": ["bar", "foo", "the"]
+    },
+        "output": [6, 9, 12]
+    },
+    {
+        "title": "Repeated-word sequence 💥",
+        "description": "Handles repeated words properly when the same word appears multiple times in the list. 🔣",
+        "input": {
+            "s": "aaaabaaaab",
+            "words": ["aa", "aa", "ab"]
+        },
+        "output": [1, 3]
+    },
+    {
+        "title": "Single word match 🎯",
+        "description": "Checks a simple case with one word to ensure the matching logic handles minimal input. 🧪",
+        "input": {
+            "s": "foobar",
+            "words": ["foo"]
+        },
+        "output": [0]
+    },
+    {
+        "title": "Exact full string match 🧠",
+        "description": "Uses the entire string as a perfect concatenation of all words. ✅",
+        "input": {
+            "s": "wordgoodbestword",
+            "words": ["word", "good", "best", "word"]
+        },
+        "output": [0]
+    },
+    {
+        "title": "Noisy string with hidden match 🔦",
+        "description": "Finds a hidden valid substring inside a larger string with other characters around it. 🌟",
+        "input": {
+            "s": "xxbarfootty",
+            "words": ["bar", "foo"]
+        },
+        "output": [2]
+    },
+    {
+        "title": "Edge-case short string ⚠️",
+        "description": "Handles a string that is too short to contain the full concatenation. 🛡️",
+        "input": {
+            "s": "foo",
+            "words": ["foo", "bar"]
+        },
+        "output": []
+    },
+    {
+        "title": "Different order match 🔄",
+        "description": "Verifies that words can be matched in any permutation order. 🎲",
+        "input": {
+            "s": "barfoo",
+            "words": ["foo", "bar"]
+        },
+        "output": [0]
+    },
+    {
+        "title": "Single-letter repeat 🔡",
+        "description": "Finds all valid starting points when words are single repeated letters. 🧩",
+        "input": {
+            "s": "aaaa",
+            "words": ["a", "a"]
+        },
+        "output": [0, 1, 2]
+    },
+    {
+        "title": "Partial overlap no match ⛔",
+        "description": "Ensures partial overlaps are rejected when the full word set is missing. 🚫",
+        "input": {
+            "s": "foobarfoo",
+            "words": ["foo", "bar", "baz"]
+        },
+        "output": []
+    },
+    {
+        "title": "Identical words full match 🔁",
+        "description": "Handles repeated identical words that require exact repeated segments. 🧠",
+        "input": {
+            "s": "aaaaaa",
+            "words": ["aa", "aa", "aa"]
+        },
+        "output": [0]
+    },
+    {
+        "title": "Multiple valid positions 🧭",
+        "description": "Finds every valid starting index when multiple concatenated permutations appear. 🌟",
+        "input": {
+            "s": "barfoofoobar",
+            "words": ["foo", "bar"]
+        },
+        "output": [0, 6]
+    },
+    {
+        "title": "Repeated pattern match 🔄",
+        "description": "Detects repeated exact-pattern concatenations in the string. ✅",
+        "input": {
+            "s": "abcdabcd",
+            "words": ["ab", "cd"]
+        },
+        "output": [0, 2, 4]
+    }
+]
