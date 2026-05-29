@@ -200,3 +200,4 @@ if __name__ == '__main__':
     result = runner.run(suite)
     _print_summary(result.summary)
     sys.exit(not result.wasSuccessful())
+    
